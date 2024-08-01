@@ -1,4 +1,4 @@
-package com.example.online.catalog.backoffice.repositories;
+package com.example.online.catalog.backoffice.repositories.sql;
 
 import com.example.online.catalog.backoffice.models.sql.Company;
 import com.example.online.catalog.backoffice.models.sql.Product;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Integer> {
+public interface ProductJpaRepository extends JpaRepository<Product, Integer> {
 
     Optional<Product> findByIdAndCompany(Integer id, Company company);
 

@@ -16,6 +16,9 @@ public class CatalogProduct {
     @Id
     private String id;
 
+    @Field(type = FieldType.Integer)
+    private Integer productId;
+
     @Field(type = FieldType.Text)
     private String name;
 

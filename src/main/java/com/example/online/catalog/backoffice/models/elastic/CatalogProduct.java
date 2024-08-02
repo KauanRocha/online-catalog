@@ -92,4 +92,12 @@ public class CatalogProduct {
     public void setAdditionalProducts(Set<Product> additionalProducts) {
         this.additionalProducts = additionalProducts;
     }
+
+    public Integer getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Integer productId) {
+        this.productId = productId;
+    }
 }

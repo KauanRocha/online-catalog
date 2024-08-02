@@ -5,6 +5,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 public class Catalog {
 
+    @Field(type = FieldType.Integer)
     private Integer id;
 
     @Field(type = FieldType.Text)

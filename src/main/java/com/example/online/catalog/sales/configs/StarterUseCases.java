@@ -2,6 +2,7 @@ package com.example.online.catalog.sales.configs;
 
 
 import com.example.online.catalog.sales.application.core.usecase.CatalogUseCase;
+import com.example.online.catalog.sales.application.port.out.CatalogPort;
 import com.example.online.catalog.sales.application.port.out.CompanyPort;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class StarterUseCases {
 
     @Bean
-    public CatalogUseCase catalogUseCase(CompanyPort companyPort) {
-        return new CatalogUseCase(companyPort);
+    public CatalogUseCase catalogUseCase(CompanyPort companyPort, CatalogPort catalogPort) {
+        return new CatalogUseCase(companyPort, catalogPort);
     }
 }

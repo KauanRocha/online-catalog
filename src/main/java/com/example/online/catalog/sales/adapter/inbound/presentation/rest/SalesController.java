@@ -1,12 +1,10 @@
 package com.example.online.catalog.sales.adapter.inbound.presentation.rest;
 
+import com.example.online.catalog.sales.application.core.domain.CatalogProduct;
 import com.example.online.catalog.sales.application.core.domain.Company;
 import com.example.online.catalog.sales.application.port.in.CatalogServicePort;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,10 @@ public class SalesController {
     @GetMapping(path = "/stores")
     public List<Company> searchStores(@RequestParam @NotNull String zipCode, @RequestParam(defaultValue = "") String searchTerm) {
         return catalogService.searchForStores(zipCode, searchTerm);
+    }
+
+    @GetMapping(path = "/{companyId}/products")
+    public List<CatalogProduct> searchStores(@PathVariable Integer companyId, @RequestParam(defaultValue = "") String searchTerm) {
+        return catalogService.searchProductsByCompanyId(companyId, searchTerm);
     }
 }

@@ -2,7 +2,7 @@ package com.example.online.catalog.backoffice.models.sql;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "BackOfficeCompany")
 @Table(name = "companies")
 public class Company {
 

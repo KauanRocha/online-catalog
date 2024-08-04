@@ -30,6 +30,7 @@ public class Product {
     @JoinColumn(name = "id_category")
     private Category category;
 
+    @ManyToMany
     @JoinTable(
             name = "assoc_products_additional_products",
             joinColumns = @JoinColumn(name = "id_product"),

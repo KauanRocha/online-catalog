@@ -1,5 +1,6 @@
 package com.example.online.catalog.sales.adapter.outbound.entity.sql;
 
+import com.example.online.catalog.sales.adapter.outbound.entity.sql.order.Address;
 import jakarta.persistence.*;
 
 @Entity

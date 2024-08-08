@@ -1,6 +1,6 @@
 package com.example.online.catalog.sales.application.core.usecase;
 
-import com.example.online.catalog.sales.application.core.domain.CatalogProduct;
+import com.example.online.catalog.sales.application.core.domain.catalog.CatalogProduct;
 import com.example.online.catalog.sales.application.core.domain.Company;
 import com.example.online.catalog.sales.application.port.in.CatalogServicePort;
 import com.example.online.catalog.sales.application.port.out.CatalogPort;
@@ -20,11 +20,6 @@ public class CatalogUseCase implements CatalogServicePort {
     }
 
     @Override
-    public List<CatalogProduct> getCatalogProducts(Integer companyId) {
-        return catalogPort.getCatalogProductsByCompanyId(companyId);
-    }
-
-    @Override
     public List<Company> searchForStores(String searchTerm, String zipCode) {
         return companyPort.findCompanyByQueryAndZipCode(searchTerm, zipCode);
     }
@@ -33,6 +28,5 @@ public class CatalogUseCase implements CatalogServicePort {
     public List<CatalogProduct> searchProductsByCompanyId(Integer companyId, String searchTerm) {
         return catalogPort.getCatalogProductsByCompanyId(companyId);
     }
-
 
 }

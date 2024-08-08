@@ -1,5 +1,7 @@
 package com.example.online.catalog.sales.application.core.domain;
 
+import com.example.online.catalog.sales.application.core.domain.order.Address;
+
 public class Company {
 
     private Integer id;

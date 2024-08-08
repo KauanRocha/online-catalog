@@ -1,6 +1,6 @@
-package com.example.online.catalog.backoffice.payloads.requests;
+package com.example.online.catalog.manager.product;
 
-import com.example.online.catalog.backoffice.models.sql.Product;
+import com.example.online.catalog.manager.category.CategoryRequest;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
@@ -30,7 +30,6 @@ public record ProductRequest(
         product.setPrice(price);
         product.setPromotionalPrice(price);
         product.setDescription(description);
-        product.setCategory(category.build());
         product.setAdditionalProducts(
                 additionalProducts.stream()
                         .map(ProductRequest::build)

@@ -1,6 +1,6 @@
-package com.example.online.catalog.backoffice.payloads.requests;
+package com.example.online.catalog.manager.catalog;
 
-import com.example.online.catalog.backoffice.models.sql.Catalog;
+import com.example.online.catalog.manager.product.ProductRequest;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.Set;

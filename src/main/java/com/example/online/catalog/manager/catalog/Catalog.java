@@ -1,10 +1,11 @@
-package com.example.online.catalog.backoffice.models.sql;
+package com.example.online.catalog.manager.catalog;
 
+import com.example.online.catalog.manager.company.Company;
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "categories")
-public class Category {
+@Entity(name = "ManagerCatalog")
+@Table(name = "catalogs")
+public class Catalog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,20 +27,20 @@ public class Category {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Company getCompany() {

@@ -1,6 +1,5 @@
-package com.example.online.catalog.backoffice.payloads.requests;
+package com.example.online.catalog.manager.company;
 
-import com.example.online.catalog.backoffice.models.sql.Company;
 import jakarta.validation.constraints.NotNull;
 
 public record CompanyRequest(

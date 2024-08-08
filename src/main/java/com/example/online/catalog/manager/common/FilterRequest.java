@@ -1,4 +1,4 @@
-package com.example.online.catalog.backoffice.payloads.requests;
+package com.example.online.catalog.manager.common;
 
 import jakarta.validation.constraints.NotNull;
 import org.springframework.data.domain.PageRequest;

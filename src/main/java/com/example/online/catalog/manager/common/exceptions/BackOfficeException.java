@@ -1,4 +1,4 @@
-package com.example.online.catalog.backoffice.exceptions;
+package com.example.online.catalog.manager.common.exceptions;
 
 public class BackOfficeException extends RuntimeException{
 

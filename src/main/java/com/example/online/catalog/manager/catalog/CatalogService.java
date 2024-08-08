@@ -1,11 +1,8 @@
-package com.example.online.catalog.backoffice.services;
+package com.example.online.catalog.manager.catalog;
 
-import com.example.online.catalog.backoffice.exceptions.BackOfficeNotFoundException;
-import com.example.online.catalog.backoffice.models.sql.Catalog;
-import com.example.online.catalog.backoffice.models.sql.Company;
-import com.example.online.catalog.backoffice.payloads.requests.CatalogRequest;
-import com.example.online.catalog.backoffice.payloads.requests.FilterRequest;
-import com.example.online.catalog.backoffice.repositories.sql.CatalogJpaRepository;
+import com.example.online.catalog.manager.common.exceptions.BackOfficeNotFoundException;
+import com.example.online.catalog.manager.company.Company;
+import com.example.online.catalog.manager.common.FilterRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 

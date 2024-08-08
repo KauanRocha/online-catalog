@@ -1,7 +1,6 @@
-package com.example.online.catalog.backoffice.repositories.sql;
+package com.example.online.catalog.manager.product;
 
-import com.example.online.catalog.backoffice.models.sql.Company;
-import com.example.online.catalog.backoffice.models.sql.Product;
+import com.example.online.catalog.manager.company.Company;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,18 +1,17 @@
-package com.example.online.catalog.backoffice.models.elastic;
+package com.example.online.catalog.manager.company;
 
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
+import jakarta.persistence.*;
 
-
+@Entity(name = "BackOfficeCompany")
+@Table(name = "companies")
 public class Company {
 
-    @Field(type = FieldType.Integer)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Field(type = FieldType.Text)
     private String name;
 
-    @Field(type = FieldType.Text)
     private String description;
 
     public String getDescription() {

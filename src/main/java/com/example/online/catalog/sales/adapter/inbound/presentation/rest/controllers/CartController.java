@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping( path = "/sales/cart")
+@RequestMapping( path = "/api/sales/cart")
 public class CartController {
 
     private final CartServicePort cartServicePort;
@@ -18,8 +18,8 @@ public class CartController {
         this.cartServicePort = cartServicePort;
     }
 
-    @PostMapping(path = "/stores")
+    @PostMapping
     public Integer create(@UserId Integer userId, @RequestBody Cart cart) {
-        return cartServicePort.createCart(cart).getId();
+        return cartServicePort.createCart(cart, userId).getId();
     }
 }

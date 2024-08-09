@@ -5,5 +5,6 @@ public enum CartStatusEnum {
     COMPLETED,
     CANCELED,
     ABANDONED,
-    EXPIRED
+    EXPIRED,
+    IN_PROGRESS
 }

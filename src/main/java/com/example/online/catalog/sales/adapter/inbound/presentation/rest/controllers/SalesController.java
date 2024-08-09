@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping( path = "/sales")
+@RequestMapping( path = "/api/sales")
 public class SalesController {
 
     private final CatalogServicePort catalogService;

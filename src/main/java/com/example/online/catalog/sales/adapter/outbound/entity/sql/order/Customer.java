@@ -1,5 +1,6 @@
 package com.example.online.catalog.sales.adapter.outbound.entity.sql.order;
 
+import com.example.online.catalog.sales.adapter.outbound.entity.sql.User;
 import jakarta.persistence.*;
 
 @Entity(name = "SalesCustomer")
@@ -10,7 +11,9 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String name;
+    @OneToOne
+    @PrimaryKeyJoinColumn
+    private User user;
 
     public Integer getId() {
         return id;
@@ -20,11 +23,11 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public User getUser() {
+        return user;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -4,7 +4,12 @@ public class Customer {
 
     private Integer id;
 
-    private String name;
+    public Customer(User user) {
+        this.id = user.getId();
+    }
+
+    public Customer() {
+    }
 
     public Integer getId() {
         return id;
@@ -14,11 +19,4 @@ public class Customer {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

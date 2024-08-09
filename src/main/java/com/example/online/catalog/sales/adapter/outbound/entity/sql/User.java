@@ -1,12 +1,10 @@
-package com.example.online.catalog.auth.domain.core;
+package com.example.online.catalog.sales.adapter.outbound.entity.sql;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
-
-@Entity(name = "authUser")
+@Entity(name = "SalesUser")
 @Table(name = "users")
-public class User implements Serializable {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,14 +15,7 @@ public class User implements Serializable {
     @Column(name = "email", updatable = false)
     private String email;
 
-    @Column(name = "phone")
     private String phone;
-
-    @Column(name = "image")
-    private String image;
-
-    @Column(name = "password")
-    private String password;
 
     public Integer getId() {
         return id;
@@ -56,21 +47,5 @@ public class User implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }
